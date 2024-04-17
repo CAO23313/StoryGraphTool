@@ -1,58 +1,172 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "Dream",
+    "Credits": "Created by Adam Smith (amsmith@ucsc.edu). Customized by Eric Yu (qyu46@ucsc.edu)",
+    "InitialLocation": "Hall",
+    "Nokey": "defkey",
+    "final": "Open",
+    "Lock": false,
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Hall": {
+            "Body": "You wake up from a long dream, and everything around looks familiar to you, but you can't remember what is this place, it's a huge hall inside of a building, and there are several places for you to explore. The living room, the kitchen of the building, or you can walk outside to the yard for explore things outside of the building. ",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
-                }
-            ]
-        },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "Goes to the living room",
+                    "Target": "LivingRoom"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
-                }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Goes to the kitchen",
+                    "Target": "Kitchen"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
+                    "Text": "Goes outside to the yard",
+                    "Target": "Yard"
                 }
+                
             ]
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
+        "LivingRoom": {
+            "Body": "You go to the living room, the room looks clean, and everything is tidy. Looks like someone has lived here not long ago. You decide to? ",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "Searching for useful stuff that can help you to escape from here",
+                    "Target": "L_search"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Return back to the hall",
+                    "Target": "Hall"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "L_search": {
+            "Body": "You have to search around the room, you find some clothes and shoes. However, those couldn't help you to escape from here. ",
+            "Choices": [
+                {
+                    "Text": "Return back to the hall",
+                    "Target": "Hall"
+                }
+            ]
+        },
+        "Kitchen": {
+            "Body": "You go to the kitchen, there are a lot of foods inside the kitchen. You take a look at those foods, it's fresh, and even the mud on the root is still wet. However, after you look around the kitchen, there is no useful stuff to help you escape from this place.  ",
+            "Choices": [
+                {
+                    "Text": "Return back to the hall",
+                    "Target": "Hall"
+                }
+            ]
+        },
+        "Yard": {
+            "Body": "You go to the yard, it's a broad place with not a lot of things around. You can see a storage room far away, the stables building next to it, and the stream that passes through the yard. You decide to? ",
+            "Choices": [
+                {
+                    "Text": "Goes to the Storage building",
+                    "Target": "Storage"
+                },
+                {
+                    "Text": "Goes to the Stables next to it",
+                    "Target": "Stables"
+                },
+                {
+                    "Text": "Goes to the stream",
+                    "Target": "Stream"
+                },
+                {
+                    "Text": "Goes back to the hall",
+                    "Target": "Hall"
+                }
+            ]
+        },
+        "Storage": {
+            "Body": "You go inside the storage building, there is a lot of stuff inside. However, unlike the living room, everything inside this storage building looks old without well maintained. You decide to? ",
+            "Choices": [
+                {
+                    "Text": "Searching those stuffs inside the building, trying to find some useful stuff that can help you to escape from here",
+                    "Target": "S_search"
+                },
+                {
+                    "Text": "Return back to the yard",
+                    "Target": "Yard"
+                }
+            ]
+        },
+        "S_search": {
+            "Body": "You've searched every corner of the storage build, but you still can't find anything helpful for you. However, in a moment, you saw something shining under the dusty shelf. You pick it up and clean it, it's a key, but you don't know what's this key use for. But in your deep mind, you believe that the key is an important material for escaping this place. ",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Yard"
+                }
+            ]
+        },
+        "Stables": {
+            "Body": "You came to the stables, there were no horses inside the stables. However, the haystack and water tank have just been refilled. Everything looks weird inside these stables. You looked around, but there was nothing useful here to help escape.  ",
+            "Choices": [
+                {
+                    "Text": "Return back to the Yard",
+                    "Target": "Yard"
+                }
+            ]
+        },
+        "Stream": {
+            "Body": "You go to the stream, the stream came from the mountain and passed over this place. It's a good water resource for this place, but you don't have time to think about those things, the most important thing is to escape from this place. You saw a huge wall with a gate blocking away this place from outside. However, after those searches, you feel tired already. You decide to? ",
+            "Choices": [
+                {
+                    "Text": "Goes to the gate",
+                    "Target": "Gate"
+                },
+                {
+                    "Text": "Take a rest",
+                    "Target": "TakeRest"
+                },
+                {
+                    "Text": "Return back to the yard",
+                    "Target": "Yard"
+                }
+            ]
+        },
+        "TakeRest": {
+            "Body": "You decide to take a rest, you find a good place to sit down and drink the water from the stream. Suddenly, a recall from your memory becomes clear. In your memory, you memorized a key in the storage room, maybe it's a good opinion to check the storage room.  ",
+            "Choices": [
+                {
+                    "Text": "Return back to the stream",
+                    "Target": "Stream"
+                }
+            ]
+        },
+        "Gate": {
+            "Body": "You arrived at the gate, it was a huge gate, and the wall was blocking this area from the outside world. You trying to open the gate, but it's not moving, seems like the gate is been locked, you might need a key to open the gate to escape. ",
+            "Choices": [
+                {
+                    "Text": "Open the gate",
+                    "Target": "Result"
+                },
+                {
+                    "Text": "Return back to the stream",
+                    "Target": "Stream"
+                }
+            ]
+        },
+        "Result": {
+            "Body": "",
+            "Choices": [
+                {
+                    "Text": "Return back to the gate",
+                    "Target": "Gate"
+                    
+                }
+            ]
+        },
+        "defkey": {
+            "Body": "You can't open the gate, because you don't have the key",
+            "Choices": [
+                {
+                    "Text": "Return back to the stream",
+                    "Target": "Stream"
+                }
+            ]
+        },
+        "Open": {
+            "Body": "You opened the gate, and trying to start escaped from this place. But when you leaving the place, your vision starts to be vague, and everything fades away from your mind...... "
         }
     }
 }
